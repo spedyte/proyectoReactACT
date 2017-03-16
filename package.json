@@ -1,0 +1,28 @@
+{
+  "name": "proyectoreactact",
+  "version": "1.0.0",
+  "description": "project to connet spotify with react",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --hot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spedyte/proyectoReactACT.git"
+  },
+  "keywords": [
+    "react",
+    "spotify",
+    "github"
+  ],
+  "author": "armando castaneda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spedyte/proyectoReactACT/issues"
+  },
+  "homepage": "https://github.com/spedyte/proyectoReactACT#readme",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
+}
