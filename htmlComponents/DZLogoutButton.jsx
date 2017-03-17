@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 export class DZLogoutButton extends React.Component {
   constructor(props)
@@ -11,6 +12,9 @@ export class DZLogoutButton extends React.Component {
   {
     DZ.logout(function() {
       console.log('Good bye!');
+       document.getElementById('titleUserName').innertHTML="";
+       document.getElementById('divProfileUser').innertHTML="";
+       document.getElementById('divImgUser').innertHTML="";
     });
   }
 

@@ -1,30 +1,110 @@
 <!DOCTYPE html>
 <html lang = "en">
+<title>ReactDZer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+</style>
+<body class="w3-light-grey">
 
-   <head>
-      <meta charset = "UTF-8">
-      <title>React App</title>
-   </head>
+<!-- HEADER -->
+<div class="w3-content w3-margin-top  w3-container w3-teal w3-center w3-margin-top" style="max-width:1400px;">
+	<div id="divLoginButton">
+	</div>
+	<div id="divLogoutButton">
+	</div>
+</div>
 
-   <body>
-      <div id = "app"></div>
-      <div id = "divLoginButton"></div>
-      <div id = "divLogoutButton"></div>
-      <div id = "divPlayer"></div>
-      <div id="dz-root"></div>
-      <script src="http://e-cdn-files.deezer.com/js/min/dz.js"></script>
-      <script>
-		DZ.init({
-			appId  : '228662',
-			channelUrl : 'http://localhost:7777/channel.html',
-			player: {
-				container: 'divPlayer',
-				width : 600,
-				height : 400,
-				onload : function(){}
-			}
-		});
-      </script>
-      <script src = "index.js"></script>
-   </body>
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container" >
+          <div id="divImgUser">
+          	<!--HERE PUTS THE USER IMAGE-->
+          </div>
+          <div class="w3-display-bottomleft w3-container w3-text-black" id="titleUserName">
+          	<!--HERE PUTS THE USER NAME-->
+          </div>
+        </div>
+        <hr>
+        <div class="w3-container" id="divProfileUser">
+          <!--HERE PUTS THE PROFILE DATA-->
+        </div>
+      </div><br>
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+    
+      <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Play List</h2>
+        <div class="w3-container">
+	      <div id = "divPlayer">
+	      	<!--HERE PUTS THE DEEZER PLAYER-->
+	      </div>
+	      <h5 class="w3-opacity"><b>Front End Developer / w3schools.com</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2015 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
+          <p>Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Web Developer / something.com</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2012 - Dec 2014</h6>
+          <p>Consectetur adipisicing elit. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Graphic Designer / designsomething.com</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2010 - Mar 2012</h6>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p><br>
+        </div>
+        <div id="dz-root"><!--THIS IS THE DEEZER DIV--></div>
+      </div>
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
+<footer class="w3-container w3-teal w3-center w3-margin-top">
+  <p>Find me on social media.</p>
+  <i class="fa fa-facebook-official w3-hover-text-indigo w3-large"></i>
+  <i class="fa fa-instagram w3-hover-text-purple w3-large"></i>
+  <i class="fa fa-snapchat w3-hover-text-yellow w3-large"></i>
+  <i class="fa fa-pinterest-p w3-hover-text-red w3-large"></i>
+  <i class="fa fa-twitter w3-hover-text-light-blue w3-large"></i>
+  <i class="fa fa-linkedin w3-hover-text-indigo w3-large"></i>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+	<!--SDK Deezer-->
+  <script src="http://e-cdn-files.deezer.com/js/min/dz.js"></script>
+  <script>
+	DZ.init({
+		appId  : '228662',
+		channelUrl : 'http://localhost:7777/channel.html',
+		player: {
+			container: 'divPlayer',
+			width : 600,
+			height : 400,
+			onload : function(){}
+		}
+	});
+  </script>
+  <script src = "index.js"></script>
+</body>
 </html>
