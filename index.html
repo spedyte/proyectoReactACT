@@ -8,7 +8,23 @@
 
    <body>
       <div id = "app"></div>
+      <div id = "divLoginButton"></div>
+      <div id = "divLogoutButton"></div>
+      <div id = "divPlayer"></div>
+      <div id="dz-root"></div>
+      <script src="http://e-cdn-files.deezer.com/js/min/dz.js"></script>
+      <script>
+		DZ.init({
+			appId  : '228662',
+			channelUrl : 'http://localhost:7777/channel.html',
+			player: {
+				container: 'divPlayer',
+				width : 600,
+				height : 400,
+				onload : function(){}
+			}
+		});
+      </script>
       <script src = "index.js"></script>
    </body>
-
 </html>
