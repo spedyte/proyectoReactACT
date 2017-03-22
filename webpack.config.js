@@ -1,5 +1,5 @@
 var config = {
-   entry: './main.js',
+   entry: ['whatwg-fetch', './main.js'],
 	
    output: {
       path:'/',
@@ -8,7 +8,8 @@ var config = {
 	
    devServer: {
       inline: true,
-      port: 7777
+      port: 7777,
+       headers: { "Access-Control-Allow-Origin": "*" }
    },
 	
    module: {

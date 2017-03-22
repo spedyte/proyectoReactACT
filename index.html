@@ -19,7 +19,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 	</div>
 </div>
 
-<div class="w3-content w3-margin-top" style="max-width:1400px;">
+<div class="w3-content w3-margin-top" style="max-width:1400px;max-height:850px;">
   <!-- The Grid -->
   <div class="w3-row-padding">
   
@@ -48,27 +48,17 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     <div class="w3-twothird">
     
       <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Play List</h2>
-        <div class="w3-container">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Sound now!</h2>
+          <div id = "divSearchInput">
+	      	<!--HERE PUTS THE input to search playlist by artists-->
+	      </div>
+	      <div style="height: 200px; width: 400; overflow-y: scroll;" id="divLists">
+	      	
+	      </div>
+	      <br/> <br/>
 	      <div id = "divPlayer">
 	      	<!--HERE PUTS THE DEEZER PLAYER-->
 	      </div>
-	      <h5 class="w3-opacity"><b>Front End Developer / w3schools.com</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2015 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
-          <p>Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Web Developer / something.com</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2012 - Dec 2014</h6>
-          <p>Consectetur adipisicing elit. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Graphic Designer / designsomething.com</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2010 - Mar 2012</h6>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p><br>
-        </div>
         <div id="dz-root"><!--THIS IS THE DEEZER DIV--></div>
       </div>
     <!-- End Right Column -->
@@ -88,22 +78,21 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   <i class="fa fa-pinterest-p w3-hover-text-red w3-large"></i>
   <i class="fa fa-twitter w3-hover-text-light-blue w3-large"></i>
   <i class="fa fa-linkedin w3-hover-text-indigo w3-large"></i>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer>
 
 	<!--SDK Deezer-->
   <script src="http://e-cdn-files.deezer.com/js/min/dz.js"></script>
   <script>
-	DZ.init({
-		appId  : '228662',
-		channelUrl : 'http://localhost:7777/channel.html',
-		player: {
-			container: 'divPlayer',
-			width : 600,
-			height : 400,
-			onload : function(){}
-		}
-	});
+		DZ.init({
+			appId  : '228662',
+			channelUrl : 'http://localhost:7777/channel.html',
+			player: {
+				container: 'divPlayer',
+				width : 600,
+				height : 400,
+				onload : function(){}
+			}
+		});
   </script>
   <script src = "index.js"></script>
 </body>

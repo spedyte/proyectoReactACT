@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {EmptyElement} from './EmpyElement.jsx';
+import {DZLoginButton} from './DZLoginButton.jsx';
 
 export class DZLogoutButton extends React.Component {
   constructor(props)
@@ -11,10 +13,13 @@ export class DZLogoutButton extends React.Component {
   logoutDeezer()
   {
     DZ.logout(function() {
-      console.log('Good bye!');
-       document.getElementById('titleUserName').innertHTML="";
-       document.getElementById('divProfileUser').innertHTML="";
-       document.getElementById('divImgUser').innertHTML="";
+      console.log('Closing session!');
+      ReactDOM.render(<EmptyElement />, document.getElementById('titleUserName'));
+      ReactDOM.render(<EmptyElement />, document.getElementById('divProfileUser'));
+      ReactDOM.render(<EmptyElement />, document.getElementById('divImgUser'));
+      ReactDOM.render(<EmptyElement />, document.getElementById('divLists'));
+      ReactDOM.render(<DZLoginButton />, document.getElementById('divLogoutButton'));
+      DZ.player.pause();
     });
   }
 
